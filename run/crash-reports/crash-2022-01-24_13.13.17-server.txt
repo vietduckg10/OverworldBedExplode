@@ -1,0 +1,71 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 1/24/22 1:13 PM
+Description: Exception in server tick loop
+
+com.electronwill.nightconfig.core.io.WritingException: Unsupported value type: class [Ljava.lang.String;
+	at com.electronwill.nightconfig.toml.ValueWriter.write(ValueWriter.java:66) ~[toml-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.toml.TableWriter.writeNormal(TableWriter.java:76) ~[toml-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.toml.TableWriter.writeNormal(TableWriter.java:47) ~[toml-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.toml.TableWriter.writeNormal(TableWriter.java:92) ~[toml-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.toml.TableWriter.writeNormal(TableWriter.java:47) ~[toml-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.toml.TomlWriter.write(TomlWriter.java:30) ~[toml-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.core.io.ConfigWriter.write(ConfigWriter.java:42) ~[core-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.core.io.ConfigWriter.write(ConfigWriter.java:88) ~[core-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.core.file.WriteSyncFileConfig.save(WriteSyncFileConfig.java:61) ~[core-3.6.3.jar:?] {}
+	at com.electronwill.nightconfig.core.file.AutosaveCommentedFileConfig.save(AutosaveCommentedFileConfig.java:80) ~[core-3.6.3.jar:?] {}
+	at net.minecraftforge.common.ForgeConfigSpec.setConfig(ForgeConfigSpec.java:98) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.config.ModConfig.setConfigData(ModConfig.java:86) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker.openConfig(ConfigTracker.java:105) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker.lambda$loadConfigs$1(ConfigTracker.java:83) ~[forge:?] {re:classloading}
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:1.8.0_312] {}
+	at java.util.Collections$SynchronizedCollection.forEach(Collections.java:2064) ~[?:1.8.0_312] {}
+	at net.minecraftforge.fml.config.ConfigTracker.loadConfigs(ConfigTracker.java:83) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.server.ServerLifecycleHooks.handleServerAboutToStart(ServerLifecycleHooks.java:94) ~[forge:?] {re:classloading}
+	at net.minecraft.server.integrated.IntegratedServer.initServer(IntegratedServer.java:59) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:621) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:232) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_312] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_312, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 337509928 bytes (321 MB) / 1084227584 bytes (1034 MB) up to 1890582528 bytes (1803 MB)
+	CPUs: 4
+	JVM Flags: 2 total; -XX:+IgnoreUnrecognizedVMOptions -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.0.9+86+master.3cf110c
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.2.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.2_mapped_official_1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.2_mapped_official_1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.2_mapped_official_1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.2_mapped_official_1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.2.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.2_mapped_official_1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.2
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |Overworld Bed Explode         |overworldbedexplode           |NONE                |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.2_mapped_official_1.16.5-recomp.|Forge                         |forge                         |36.2.2              |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 1942e5df-80cc-48d5-987f-827c84d68a6d
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:overworldbedexplode, mod:forge
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

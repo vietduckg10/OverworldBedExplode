@@ -1,0 +1,13 @@
+
+["Overworld Bed Explode Config"]
+	#Number of mobs can spawn, random between 1 and x (x is the input number, x > 0). Example: 5 will spawn 1-5 each mob in the list
+	"Number Of Mobs" = 1
+	#Bed explosion chance from 0.0 to 1.0, default: 1.0
+	"Bed Explosion Chance" = 1.0
+	#Apply this mod on all dimension?(true/false) default: true
+	"Apply On All Dimension" = true
+	#List of mob can spawn when bed explode. Example: ["minecraft:zombie","minecraft:skeleton"] will spawn zombie and skeleton when bed explode
+	"Mob List" = []
+	#Teleport random player to bed explode location. (0.0-1.0)
+	"Teleport Chance" = 1.0
+
